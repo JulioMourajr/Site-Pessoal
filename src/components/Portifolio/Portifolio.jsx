@@ -1,4 +1,8 @@
 import React from "react";
+import casimiroflix from '../../assets/casimiroflix.jpg';
+import gitHub from '../../assets/gitHub.jpg';
+import java from '../../assets/javaPOO.png';
+import spring from '../../assets/spring.png';
 
 function Portifolio(){
   return(
@@ -9,7 +13,7 @@ function Portifolio(){
           href="https://github.com/JulioMourajr/Casimiroflix"
           target="_blank"
           rel="noopener noreferrer"
-          ><img src="./imgs/casimiroflix.JPG" alt=""
+          ><img src={casimiroflix} alt=""
         /></a>
         <p>Casimiroflix</p>
       </div>
@@ -18,7 +22,7 @@ function Portifolio(){
           href="https://github.com/JulioMourajr/cracha-nlw"
           target="_blank"
           rel="noopener noreferrer"
-          ><img src="./imgs/gitHub.JPG" alt=""
+          ><img src={gitHub} alt=""
         /></a>
         <p>Crachá Digital</p>
       </div>
@@ -27,7 +31,7 @@ function Portifolio(){
           href="https://github.com/JulioMourajr/java-springboot-learning"
           target="_blank"
           rel="noopener noreferrer"
-          ><img src="./imgs/javaPOO.png" alt=""
+          ><img src={java} alt=""
         /></a>
         <p>POO Java</p>
       </div>
@@ -36,7 +40,7 @@ function Portifolio(){
           href="https://github.com/JulioMourajr/Spring-Boot-Api"
           target="_blank"
           rel="noopener noreferrer"
-          ><img src="./imgs/spring.png" alt=""
+          ><img src={spring} alt=""
         /></a>
         <p>API - Spring</p>
       </div>

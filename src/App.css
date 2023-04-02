@@ -59,13 +59,14 @@ section p {
 
 /*Página de Contato!*/
 
-#formulario{
+.formulario{
   display: flex;
   justify-content: center;
 }
 
 #fname{
   padding: 0.5rem 2.2rem;
+  display: block;
 }
 
 #email{
