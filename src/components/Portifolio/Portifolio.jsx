@@ -5,48 +5,43 @@ import java from '../../assets/javaPOO.png';
 import spring from '../../assets/spring.png';
 
 function Portifolio(){
+
+  const portifolios = [
+    {
+      link:"https://github.com/JulioMourajr/Casimiroflix",
+      imagem: casimiroflix,
+      titulo:"Casimiroflix"
+    },
+    {
+      link:"https://github.com/JulioMourajr/cracha-nlw",
+      imagem: gitHub,
+      titulo:"Crachá Digital"
+    },
+    {
+      link:"https://github.com/JulioMourajr/java-springboot-learning",
+      imagem:java,
+      titulo:"Java"
+    },
+    {
+      link:"https://github.com/JulioMourajr/Spring-Boot-Api",
+      imagem:spring,
+      titulo:'Spring'
+    }
+  ];
+
   return(
-    <main>
-      <section className="section-grid">
-      <div className="imgPortifolio">
+    <section className="section-grid">
+   
+    {portifolios.map((portifolio) => <div className="imgPortifolio">
         <a
-          href="https://github.com/JulioMourajr/Casimiroflix"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><img src={casimiroflix} alt=""
-        /></a>
-        <p>Casimiroflix</p>
-      </div>
-      <div className="imgPortifolio">
-        <a
-          href="https://github.com/JulioMourajr/cracha-nlw"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><img src={gitHub} alt=""
-        /></a>
-        <p>Crachá Digital</p>
-      </div>
-      <div className="imgPortifolio">
-        <a
-          href="https://github.com/JulioMourajr/java-springboot-learning"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><img src={java} alt=""
-        /></a>
-        <p>POO Java</p>
-      </div>
-      <div className="imgPortifolio">
-        <a
-          href="https://github.com/JulioMourajr/Spring-Boot-Api"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><img src={spring} alt=""
-        /></a>
-        <p>API - Spring</p>
-      </div>
-    </section>
-    </main>
-  )
+          href={portifolio.link}
+          target="_blank">
+            <img src={portifolio.imagem} alt=""/>
+        </a>
+        <p>{portifolio.titulo}</p>
+      </div>)}
+    </section>   
+    ) 
 }
 
 export default Portifolio;
