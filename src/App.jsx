@@ -6,8 +6,9 @@ import Footer from './components/Footer/Footer';
 import Curriculo from './components/Curriculo/Curriculo';
 import Portifolio from './components/Portifolio/Portifolio';
 import Contato from './components/Contato/Contato';
+import Navegacao from './components/Navegacao/Navegacao';
 
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -16,13 +17,9 @@ function App() {
     
 
     <BrowserRouter>
-    <nav className='menu'>
-      <ul>
-        <a><li><Link to={"/"}>CURRICULO</Link></li></a>
-        <a><li><Link to={"/portifolio"}>PORTIFOLIO</Link></li></a>
-        <a><li><Link to={"/contato"}>CONTATO</Link></li></a>
-      </ul>
-    </nav>
+
+    <Navegacao></Navegacao>
+    
     <Routes>
       <Route index element={<Curriculo></Curriculo>}></Route>
       <Route path="/portifolio" element={<Portifolio></Portifolio>}></Route>

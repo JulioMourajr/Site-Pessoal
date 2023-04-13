@@ -1,11 +1,12 @@
 import React from "react";
+import './Contato.css'
 
 function Contato(){
   return(
     <section className="formulario">
       <form>
           <label for="fname">Nome</label><br/><br/>
-          <input  type="text" id="fname" name="fname"/><br/><br/>
+          <input  type="text" id="fname" name="fname" placeholder="Nome"/><br/><br/>
           <label for="email">Email</label><br/><br/>
           <input type="email" id="email" name="email" placeholder="nome@email.com"/><br/><br/>
         

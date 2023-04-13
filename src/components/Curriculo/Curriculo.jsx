@@ -1,4 +1,5 @@
 import React from "react";
+import './Curriculo.css'
 
 function Curriculo(){
   const secoes = [

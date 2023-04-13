@@ -1,0 +1,15 @@
+section{
+    background-color: #2D6580;
+    color: white;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  section p {
+    margin: 1rem;
+  }

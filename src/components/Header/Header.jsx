@@ -1,6 +1,6 @@
 import React from 'react'
 import julioAvatar from '../../assets/avatar.jpg';
-
+import './Header.css' 
 
 function Header(){
   return(

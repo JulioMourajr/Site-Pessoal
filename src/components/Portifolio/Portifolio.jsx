@@ -3,7 +3,7 @@ import casimiroflix from '../../assets/casimiroflix.jpg';
 import gitHub from '../../assets/gitHub.jpg';
 import java from '../../assets/javaPOO.png';
 import spring from '../../assets/spring.png';
-
+import './Portifolio.css'
 function Portifolio(){
 
   const portifolios = [

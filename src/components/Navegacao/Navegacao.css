@@ -1,0 +1,19 @@
+.menu{
+    background-color: #59CBFF;
+  }
+  
+  a{
+    text-decoration: none;
+    list-style: none;
+  }
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    justify-content: center;
+    margin-top: 0;
+  }
+  
+  li{
+    margin: 1rem;
+  }

@@ -1,0 +1,24 @@
+.imgPortifolio img{
+    width: 250px ;
+    height: 250px;
+    margin-top: 30px ;
+    margin-left: 40px;
+  }
+  
+  .imgPortifolio p{
+    margin-left: 120px;
+  }
+  
+  .imgPortifolio{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    height: 300px;
+    
+  }
+  
+  .section-grid{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 400px 400px;
+  }
