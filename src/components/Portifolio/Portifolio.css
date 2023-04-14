@@ -22,3 +22,78 @@
     grid-template-columns: 300px 300px;
     grid-template-rows: 400px 400px;
   }
+
+  /*Responsivo*/
+  @media (max-width: 890px){
+    .section-grid{
+      display: grid;
+      grid-template-columns: 200px 200px;
+      grid-template-rows: 200px 200px;
+    }
+  
+    .imgPortifolio img{
+      width: 150px ;
+      height: 150px;
+      margin-top: 10px ;
+      margin-left: 20px;
+    }
+    .imgPortifolio a{
+      width: 150px ;
+      height: 150px;
+      margin-top: 10px ;
+      margin-left: 20px;
+    }
+    
+    .imgPortifolio p{
+      margin-left: 50px;
+    }
+    
+    .imgPortifolio{
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      height: 800px;
+    }
+
+  }
+
+  @media (max-width: 450px) {
+    section{
+      max-width: 200px;
+      font-size: 0.8rem;
+    }
+  
+    ul{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(50px, auto));
+      gap: 10px;
+      font-size: 0.8rem;
+    }
+  
+    .section-grid{
+      display: grid;
+      grid-template-columns: 100px 100px;
+      grid-template-rows: 100px 100px;
+    }
+  
+    .imgPortifolio img{
+      width: 80px ;
+      height: 80px;
+      margin-top: 20px ;
+      margin-left: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .imgPortifolio p{
+      display: none;
+    }
+  
+    .imgPortifolio{
+      margin-top: -10px ;
+  
+    }
+  
+    footer{
+      font-size: 0.8rem;
+    } 
+  }
+ 
