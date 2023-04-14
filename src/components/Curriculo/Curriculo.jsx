@@ -22,7 +22,7 @@ function Curriculo(){
   return(
     <>
     {secoes.map((secao) =>
-    <section>
+    <section key={secao.titulo}>
       <h2>{secao.titulo}</h2>
       <p>{secao.paragrafo1}</p>
       <p>{secao.paragrafo2}</p>

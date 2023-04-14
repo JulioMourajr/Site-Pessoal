@@ -32,7 +32,7 @@ function Portifolio(){
   return(
     <section className="section-grid">
    
-    {portifolios.map((portifolio) => <div className="imgPortifolio">
+    {portifolios.map((portifolio) => <div key={portifolio.titulo} className="imgPortifolio">
         <a
           href={portifolio.link}
           target="_blank">
