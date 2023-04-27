@@ -2,15 +2,45 @@ import React from "react";
 import './Curriculo.css'
 import dados from "./Curriculo.json";
 
-function Curriculo(){
+function Curriculo(props){
+  const {resumo,experienciaAcademica, 
+    experienciaProfissional} = props.curriculo;
+
+    if(!resumo || !experienciaAcademica || !experienciaProfissional){
+      return <p>Carregando...</p>;
+    }
   return(
     <>
-    {dados.map((secao) =>
-    <section key={secao.titulo}>
-      <h2>{secao.titulo}</h2>
-      <p>{secao.paragrafo1}</p>
-      <p>{secao.paragrafo2}</p>
-    </section>)}
+    <section>
+      <h2>Resumo</h2>
+      <p>{resumo}</p>
+    </section>
+
+    <section>
+      <h2>Acadêmico</h2>
+      <ul>
+        {experienciaAcademica.map((item, index) =>
+          <li key={index}>
+           <b>({item.anoInicio} - {item.anoFim})</b> 
+           {item.titulo}
+          </li>
+        )}
+      </ul>
+      
+    </section>
+
+    <section>
+      <h2>Profissional</h2>
+      <ul>
+        {experienciaProfissional.map((item, index) =>
+          <li key={index}>
+           <b>({item.anoInicio} - {item.anoFim})</b> 
+           {item.titulo}
+          </li>
+        )}
+      </ul>
+      
+    </section>
     </>
   )
 }

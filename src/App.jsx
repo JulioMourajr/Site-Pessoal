@@ -1,4 +1,6 @@
 import React from 'react'
+
+import api from './api';
 import './App.css'
 import julioAvatar from './assets/avatar.jpg';
 import Header from './components/Header/Header';
@@ -11,9 +13,43 @@ import Navegacao from './components/Navegacao/Navegacao';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
+
+  const [informacoes, setInformacoes] = React.useState({});
+  const [curriculo, setCurriculo] = React.useState({});
+  const [portifolio, setPortifolio] = React.useState([]);
+
+  const fecthDados = async () => {
+    try{
+
+    const informacao = await api.get('/informacoes/1');
+    setInformacoes({
+      foto:informacao.data.foto,
+      nome:informacao.data.nome,
+      cargo:informacao.data.cargo,
+    })
+
+    const experienciaAcademica = await api.get('/experiencias?tipo=academico');
+    const experienciaProfissional = await api.get('/experiencias?tipo=profissional');
+
+    setCurriculo({
+      resumo:informacao.data.resumo,
+      experienciaAcademica:experienciaAcademica.data,
+      experienciaProfissional:experienciaProfissional.data
+    })
+
+    const portifolio = await api.get('/portifolio');
+    setPortifolio(portifolio.data);
+  }catch(error){
+    console.error('Erro ao buscar dados: ', error);
+  }
+  }
+
+  React.useEffect(() => {
+    fecthDados();
+  },[])
   return (
     <>
-    <Header></Header>
+    <Header informacoes={informacoes}></Header>
     
 
     <BrowserRouter>
@@ -21,12 +57,13 @@ function App() {
     <Navegacao></Navegacao>
     
     <Routes>
-      <Route index element={<Curriculo></Curriculo>}></Route>
-      <Route path="/portifolio" element={<Portifolio></Portifolio>}></Route>
-      <Route path="/contato" element={<Contato></Contato>}></Route>
+      <Route index element={<Curriculo curriculo={curriculo}/>}/>
+      <Route path="/portifolio" element={<Portifolio portifolio={portifolio}/>}/>
+      <Route path="/contato" element={<Contato/>}/>
     </Routes>
 
     </BrowserRouter>
+    
     <Footer></Footer>
     </>
   )
