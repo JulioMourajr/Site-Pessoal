@@ -22,7 +22,7 @@ function Curriculo(props){
         {experienciaAcademica.map((item, index) =>
           <li key={index}>
            <b>({item.anoInicio} - {item.anoFim})</b> 
-           {item.titulo}
+           {item.titulo} 
           </li>
         )}
       </ul>

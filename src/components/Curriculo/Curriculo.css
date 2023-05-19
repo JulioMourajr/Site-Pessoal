@@ -13,3 +13,9 @@ section{
   section p {
     margin: 1rem;
   }
+
+  /*colocar elementos li do lado esquerdo da tela*/
+
+  ul{
+    list-style: none;
+  }

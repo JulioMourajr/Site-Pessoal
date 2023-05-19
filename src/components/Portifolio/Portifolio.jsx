@@ -1,18 +1,17 @@
 import React from "react";
-import dados from "./Portifolio.json"
 import './Portifolio.css'
 import ItemPortifolio from "../ItemPortifolio/ItemPortifolio";
-function Portifolio(){
+function Portifolio({portifolio}){
 
   return(
     <section className="section-grid">
    
-    {dados.map(
-      (portifolio) => 
-      <ItemPortifolio key={portifolio.titulo}
-        link={portifolio.link}
-        imagem={portifolio.imagem}
-        titulo={portifolio.titulo}
+    {portifolio.map(
+      (item, index) => 
+      <ItemPortifolio key={index}
+        link={item.link}
+        imagem={item.imagem}
+        titulo={item.titulo}
       ></ItemPortifolio>
     )}
     </section>   
