@@ -1,6 +1,6 @@
 import React from "react";
 import './Curriculo.css'
-import dados from "./Curriculo.json";
+
 
 function Curriculo(props){
   const {resumo,experienciaAcademica, 
@@ -31,13 +31,15 @@ function Curriculo(props){
 
     <section>
       <h2>Profissional</h2>
+      
       <ul>
         {experienciaProfissional.map((item, index) =>
+          (
           <li key={index}>
            <b>({item.anoInicio} - {item.anoFim})</b> 
            {item.titulo}
           </li>
-        )}
+        ))}
       </ul>
       
     </section>

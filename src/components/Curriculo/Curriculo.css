@@ -1,21 +1,12 @@
 section{
     background-color: #2D6580;
+    margin: 50px;
+    padding: 50px;
     color: white;
-    margin: 2rem;
-    padding: 2rem;
-    border-radius: 1rem;
-    width: 1000px;
-    margin: 0 auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-  
-  section p {
-    margin: 1rem;
+    border-radius: 25px;
   }
 
-  /*colocar elementos li do lado esquerdo da tela*/
-
-  ul{
+  section ul{
     list-style: none;
+    flex-direction: column;
   }
