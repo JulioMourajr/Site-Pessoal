@@ -21,7 +21,7 @@ function Curriculo(props){
       <ul>
         {experienciaAcademica.map((item, index) =>
           <li key={index}>
-           <b>({item.anoInicio} - {item.anoFim})</b> 
+           <b> ({item.anoInicio} - {item.anoFim}) </b> 
            {item.titulo} 
           </li>
         )}
