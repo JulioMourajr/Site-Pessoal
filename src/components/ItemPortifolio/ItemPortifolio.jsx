@@ -10,9 +10,9 @@ const ItemPortifolio = (props)=>{
     <a
       href={props.link}
       target="_blank">
-        <img src={props.imagem} alt=""/>
+        <img src={props.image} alt={props.title}/>
     </a>
-    <p>{props.titulo}</p>
+    <p>{props.title}</p>
   </div>
   )
 }

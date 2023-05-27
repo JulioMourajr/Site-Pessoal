@@ -10,8 +10,8 @@ function Portifolio({portifolio}){
       (item, index) => 
       <ItemPortifolio key={index}
         link={item.link}
-        imagem={item.imagem}
-        titulo={item.titulo}
+        imagem={item.image}
+        titulo={item.title}
       ></ItemPortifolio>
     )}
     </section>   
