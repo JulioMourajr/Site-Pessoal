@@ -17,7 +17,7 @@ function Contato(){
 
     const numeroWhats = import.meta.env.VITE_WHATSAPP_NUMBER; // numero do whats que a mensagem vai.
 
-    const linkWhats = `https://wa.me/${numeroWhats}?text=${encodeURIComponent(texto)}`;
+    const linkWhats = `https://api.whatsapp.com/send/?phone=${numeroWhats}&text=${encodeURIComponent(texto)}`;
 
     window.open(linkWhats, '_blank');
   }
